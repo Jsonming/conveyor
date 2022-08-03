@@ -10,4 +10,3 @@ ip=$(ifconfig|grep inet |grep netmask|awk '{print $2}'|tail -n 1)
 echo "http://${ip}:8000/"
 
 python3 -m http.server >log/httpd.log 2>&1
-
